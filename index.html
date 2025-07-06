@@ -1,1 +1,181 @@
-tel:1669
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>โทรหา 1669 - ฉุกเฉิน</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .emergency-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        h1 {
+            color: #e74c3c;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .call-button {
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+            padding: 20px 40px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(231, 76, 60, 0.3);
+            text-decoration: none;
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .call-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(231, 76, 60, 0.4);
+            background: linear-gradient(45deg, #c0392b, #a93226);
+        }
+
+        .call-button:active {
+            transform: translateY(0);
+        }
+
+        .phone-icon {
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
+        .info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+            color: #856404;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .call-button {
+                font-size: 1.5em;
+                padding: 15px 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="emergency-icon">🚨</div>
+        
+        <h1>1669</h1>
+        <p class="subtitle">หมายเลขฉุกเฉินแห่งชาติ</p>
+        
+        <a href="tel:1669" class="call-button">
+            <span class="phone-icon">📞</span>
+            โทรหา 1669
+        </a>
+        
+        <div class="info">
+            <h3>บริการฉุกเฉิน 1669</h3>
+            <p>• รถพยาบาลฉุกเฉิน</p>
+            <p>• การปฐมพยาบาลเบื้องต้น</p>
+            <p>• ให้คำปรึกษาทางการแพทย์</p>
+            <p>• บริการ 24 ชั่วโมง</p>
+        </div>
+        
+        <div class="warning">
+            <strong>⚠️ คำเตือน:</strong> ใช้เฉพาะกรณีฉุกเฉินเท่านั้น
+        </div>
+    </div>
+
+    <script>
+        // เพิ่มเสียงเตือนเมื่อกดปุ่ม (ถ้าเบราว์เซอร์รองรับ)
+        document.querySelector('.call-button').addEventListener('click', function() {
+            // สั่นหน้าจอถ้าเป็นมือถือ
+            if (navigator.vibrate) {
+                navigator.vibrate([200, 100, 200]);
+            }
+        });
+
+        // เพิ่มเอฟเฟกต์คลิก
+        document.querySelector('.call-button').addEventListener('mousedown', function() {
+            this.style.transform = 'scale(0.95)';
+        });
+
+        document.querySelector('.call-button').addEventListener('mouseup', function() {
+            this.style.transform = 'scale(1)';
+        });
+    </script>
+</body>
+</html>
